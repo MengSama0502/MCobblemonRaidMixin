@@ -1,0 +1,22 @@
+console:
+  common_setup: "การตั้งค่าทั่วไปเสร็จสมบูรณ์"
+  server_start: "เซิร์ฟเวอร์เริ่มทำงานเสร็จสมบูรณ์"
+  client_setup: "การตั้งค่าไคลเอนต์เสร็จสมบูรณ์"
+
+config:
+  loading_external: "กำลังโหลดไฟล์กำหนดค่าภายนอก: %path%"
+  load_external_failed: "ไม่สามารถอ่านไฟล์กำหนดค่าภายนอก จะใช้กำหนดค่าในตัว"
+  not_found: "ไม่พบไฟล์กำหนดค่าในตัว %path% จะใช้ค่าเริ่มต้น"
+  loading_internal: "กำลังโหลดไฟล์กำหนดค่าในตัว: %path%"
+  empty: "ไฟล์กำหนดค่าว่างเปล่า จะใช้ค่าเริ่มต้น"
+  loaded: "โหลดกำหนดค่าสำเร็จ มี %count% กฎการแทนที่ แหล่งที่มา: %source%"
+  load_failed: "โหลดไฟล์กำหนดค่าล้มเหลว จะใช้ค่าเริ่มต้น"
+  defaults_applied: "ใช้ค่าเริ่มต้นแล้ว"
+  reward_commands_loaded: "โหลดคำสั่งรางวัลสำหรับ %count% ระดับ"
+  source_external: "ไฟล์ภายนอก"
+  source_internal: "ทรัพยากรในตัว"
+
+reward:
+  no_player_found: "getRewardPokemon ไม่พบผู้เล่น ข้ามการดำเนินการคำสั่ง"
+  command_failed: "ดำเนินการคำสั่งรางวัล Raid ล้มเหลว: %command% - %error%"
+  exact_iv_length_error: "ข้อผิดพลาด: ความยาวอาร์เรย์ควรเป็น %expected% แต่ได้ %actual% กลับไปใช้ 31"
