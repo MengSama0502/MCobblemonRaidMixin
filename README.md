@@ -6,9 +6,16 @@
 
 ## English
 
-**MCobblemonRaidMixin** is a Fabric mod that enhances [Cobblemon](https://modrinth.com/mod/cobblemon) Raid Dens (powered by [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids)) with advanced IV (Individual Values) generation controls, spawn blacklists, and tier-based reward command execution.
+**MCobblemonRaidMixin** is a multi-platform mod (Fabric & NeoForge) that enhances [Cobblemon](https://modrinth.com/mod/cobblemon) Raid Dens (powered by [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids)) with advanced IV (Individual Values) generation controls, spawn blacklists, and tier-based reward command execution.
 
-> **Important:** This is a **Fabric Mod** — place it in the `mods/` folder, NOT the `plugins/` folder.
+> **Important:** This is a **Mod** — place it in the `mods/` folder, NOT the `plugins/` folder.
+
+### Supported Platforms
+
+| Platform | Mod ID | Description |
+|---|---|---|
+| **Fabric** | `mcobbleraidmixinfabric` | Fabric Loader version |
+| **NeoForge** | `mcobblemonraidmixin` | NeoForge version |
 
 ### Features
 
@@ -23,17 +30,25 @@
 
 | Dependency | Version |
 |---|---|
-| Fabric Loader | >= 0.18.4 |
 | Minecraft | 1.21.1 |
+| Fabric Loader (Fabric) | >= 0.18.4 |
+| NeoForge (NeoForge) | >= 21.1 |
 | Cobblemon | 1.7.3+ |
 | Cobblemon Raid Dens (Necro) | 0.11.1+ |
 
 ### Installation
 
-1. Download the latest `.jar` from [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases)
+#### Fabric
+1. Download the latest Fabric `.jar` from [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases)
 2. Place the `.jar` in your server's `mods/` folder
 3. Ensure all dependencies are also in the `mods/` folder
-4. Start/restart the server — the default config will be generated automatically at `config/mcobblemonraidmixin.yml`
+4. Start/restart the server
+
+#### NeoForge
+1. Download the latest NeoForge `.jar` from [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases)
+2. Place the `.jar` in your server's `mods/` folder
+3. Ensure all dependencies are also in the `mods/` folder
+4. Start/restart the server
 
 ### Configuration
 
@@ -121,11 +136,32 @@ Language files are located at `config/mcobblemonraidmixin/lang_*.yml` (auto-gene
 git clone https://github.com/MengSama0502/MCobblemonRaidMixin.git
 cd MCobblemonRaidMixin
 # Place Cobblemon and CobblemonRaidDens jars in libs/
+
+# Build Fabric version
+./gradlew :fabric:build
+# Output: fabric/build/libs/
+
+# Build NeoForge version
+./gradlew :neoforge:build
+# Output: neoforge/build/libs/
+
+# Build both
 ./gradlew build
-# Output: build/libs/MCobbleRaidMixinFabric-1.1.0.jar
 ```
 
 Requires **JDK 21** or newer.
+
+### Project Structure
+
+```
+MCobblemonRaidMixin/
+├── common/              # Shared code (Config, Lang, Mixins, Participant Tracker)
+├── fabric/              # Fabric platform entry point
+├── neoforge/            # NeoForge platform entry point
+├── build.gradle         # Root build script
+├── settings.gradle      # Multi-project settings
+└── README.md
+```
 
 ### License
 
@@ -164,9 +200,16 @@ SOFTWARE.
 
 ## 中文
 
-**MCobblemonRaidMixin** 是一款 Fabric 模组，用于增强 [Cobblemon](https://modrinth.com/mod/cobblemon) 的巢穴系统（基于 [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids)），提供高级 IV（个体值）生成控制、生成黑名单以及按星级分级的奖励命令执行。
+**MCobblemonRaidMixin** 是一款多平台模组（Fabric & NeoForge），用于增强 [Cobblemon](https://modrinth.com/mod/cobblemon) 的巢穴系统（基于 [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids)），提供高级 IV（个体值）生成控制、生成黑名单以及按星级分级的奖励命令执行。
 
-> **重要提示：** 这是一个 **Fabric 模组**，请放入 `mods/` 文件夹，而非 `plugins/` 文件夹。
+> **重要提示：** 这是一个 **模组**，请放入 `mods/` 文件夹，而非 `plugins/` 文件夹。
+
+### 支持的平台
+
+| 平台 | Mod ID | 说明 |
+|---|---|---|
+| **Fabric** | `mcobbleraidmixinfabric` | Fabric Loader 版本 |
+| **NeoForge** | `mcobblemonraidmixin` | NeoForge 版本 |
 
 ### 功能特性
 
@@ -181,17 +224,25 @@ SOFTWARE.
 
 | 依赖 | 版本 |
 |---|---|
-| Fabric Loader | >= 0.18.4 |
 | Minecraft | 1.21.1 |
+| Fabric Loader（Fabric） | >= 0.18.4 |
+| NeoForge（NeoForge） | >= 21.1 |
 | Cobblemon | 1.7.3+ |
 | Cobblemon Raid Dens (Necro) | 0.11.1+ |
 
 ### 安装方法
 
-1. 从 [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases) 下载最新的 `.jar` 文件
+#### Fabric
+1. 从 [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases) 下载最新的 Fabric 版 `.jar`
 2. 将 `.jar` 文件放入服务器的 `mods/` 文件夹
 3. 确保所有依赖也在 `mods/` 文件夹中
-4. 启动/重启服务器 — 默认配置文件将自动生成在 `config/mcobblemonraidmixin.yml`
+4. 启动/重启服务器
+
+#### NeoForge
+1. 从 [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases) 下载最新的 NeoForge 版 `.jar`
+2. 将 `.jar` 文件放入服务器的 `mods/` 文件夹
+3. 确保所有依赖也在 `mods/` 文件夹中
+4. 启动/重启服务器
 
 ### 配置说明
 
@@ -279,11 +330,32 @@ rewardCommandsPerTier:
 git clone https://github.com/MengSama0502/MCobblemonRaidMixin.git
 cd MCobblemonRaidMixin
 # 将 Cobblemon 和 CobblemonRaidDens 的 jar 文件放入 libs/ 目录
+
+# 构建 Fabric 版本
+./gradlew :fabric:build
+# 输出：fabric/build/libs/
+
+# 构建 NeoForge 版本
+./gradlew :neoforge:build
+# 输出：neoforge/build/libs/
+
+# 构建全部
 ./gradlew build
-# 输出：build/libs/MCobbleRaidMixinFabric-1.1.0.jar
 ```
 
 需要 **JDK 21** 或更高版本。
+
+### 项目结构
+
+```
+MCobblemonRaidMixin/
+├── common/              # 共享代码（Config, Lang, Mixins, Participant Tracker）
+├── fabric/              # Fabric 平台入口
+├── neoforge/            # NeoForge 平台入口
+├── build.gradle         # 根构建脚本
+├── settings.gradle      # 多项目设置
+└── README.md
+```
 
 ### 开源协议
 

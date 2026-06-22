@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "mcobbleraidmixinfabric",
+  "version": "${version}",
+  "name": "MCobbleRaidMixinFabric",
+  "description": "Cobblemon Raid Dens Enhancement Mod - Advanced IV control, spawn blacklist, and tier-based rewards",
+  "authors": ["MengSama0502", "niumadadi520"],
+  "contact": {
+    "homepage": "https://github.com/MengSama0502/MCobblemonRaidMixin",
+    "sources": "https://github.com/MengSama0502/MCobblemonRaidMixin"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "MengSama.Mod.mcobblemonraidmixin.fabric.Mcobblemonraidmixinfabric"
+    ]
+  },
+  "mixins": [
+    "mcobbleraidmixinfabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "1.21.1"
+  }
+}

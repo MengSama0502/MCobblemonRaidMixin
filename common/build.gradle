@@ -1,0 +1,21 @@
+plugins {
+    id 'fabric-loom' version '1.13-SNAPSHOT'
+    id 'java-library'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.fabricmc.net/" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings loom.officialMojangMappings()
+    modCompileOnly "net.fabricmc:fabric-loader:0.18.4"
+    modCompileOnly files("../libs/Cobblemon-fabric-1.7.3+1.21.1.jar")
+    modCompileOnly files("../libs/cobblemonraiddens-fabric-0.11.1+1.21.1.jar")
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    implementation "org.yaml:snakeyaml:2.2"
+}

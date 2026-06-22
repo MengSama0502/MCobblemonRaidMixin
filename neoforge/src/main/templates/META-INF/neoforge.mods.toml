@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="mcobblemonraidmixin"
+version="${mod_version}"
+displayName="MCobblemonRaidMixin"
+description="Cobblemon Raid Dens Enhancement Mod - Advanced IV control, spawn blacklist, and tier-based rewards"
+authors="MengSama0502, niumadadi520"
+displayURL="https://github.com/MengSama0502/MCobblemonRaidMixin"
+issueTrackerURL="https://github.com/MengSama0502/MCobblemonRaidMixin/issues"
+
+[[dependencies.mcobblemonraidmixin]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+
+[[dependencies.mcobblemonraidmixin]]
+modId="cobblemon"
+type="required"
+versionRange="[1.7.3,)"
+
+[[dependencies.mcobblemonraidmixin]]
+modId="cobblemonraiddens"
+type="required"
+versionRange="[0.11.1,)"
