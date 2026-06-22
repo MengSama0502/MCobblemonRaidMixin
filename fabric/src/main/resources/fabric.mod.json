@@ -10,7 +10,7 @@
     "sources": "https://github.com/MengSama0502/MCobblemonRaidMixin"
   },
   "license": "MIT",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "MengSama.Mod.mcobblemonraidmixin.fabric.Mcobblemonraidmixinfabric"

@@ -20,7 +20,7 @@
 
 ### Overview
 
-MCobblemonRaidMixin is a server-side mod for [Cobblemon](https://modrinth.com/mod/cobblemon) that significantly enhances the Raid Dens experience powered by [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids). It provides server administrators with fine-grained control over raid reward Pokemon's IV generation, the ability to blacklist specific species from spawning, and a flexible weighted command reward system — all configurable per raid tier.
+MCobblemonRaidMixin is a mod for [Cobblemon](https://modrinth.com/mod/cobblemon) that significantly enhances the Raid Dens experience powered by [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids). It provides fine-grained control over raid reward Pokemon's IV generation, the ability to blacklist specific species from spawning, and a flexible weighted command reward system — all configurable per raid tier. Works on both **server and client**, and can be used independently on either side.
 
 ### Platform Support
 
@@ -41,10 +41,19 @@ MCobblemonRaidMixin is a server-side mod for [Cobblemon](https://modrinth.com/mo
 
 ### Installation
 
+#### Server
 1. Download the appropriate JAR for your platform from [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases)
 2. Place the JAR into your server's `mods/` directory
 3. Ensure all dependencies above are also present in `mods/`
 4. Start the server — the default configuration will be auto-generated at `config/mcobblemonraidmixin.yml`
+
+#### Client (Single Player)
+1. Download the appropriate JAR for your platform from [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases)
+2. Place the JAR into your client's `mods/` directory
+3. Ensure all dependencies above are also present in `mods/`
+4. Launch the game — the default configuration will be auto-generated at `config/mcobblemonraidmixin.yml`
+
+> **Note:** The mod works independently on both sides. You can install it on the server only, client only, or both.
 
 ### Core Features
 
@@ -218,7 +227,7 @@ cd MCobblemonRaidMixin
 ### FAQ
 
 **Q: Does this mod work on the client?**
-A: No, this is a server-side only mod. It has no effect when installed on the client.
+A: Yes. The mod works on both server and client independently. You can use it on the server for multiplayer, on the client for single player, or on both.
 
 **Q: Can I use both Fabric and NeoForge versions on the same server?**
 A: No. Choose the version matching your server's mod loader. The functionality is identical.
@@ -269,7 +278,7 @@ SOFTWARE.
 
 ### 概述
 
-MCobblemonRaidMixin 是一款面向 [Cobblemon](https://modrinth.com/mod/cobblemon) 的服务端模组，基于 [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids) 深度增强巢穴玩法。为服主提供精细化的奖励宝可梦 IV 生成控制、物种黑名单过滤以及灵活的权重随机命令奖励系统——全部按巢穴星级独立配置。
+MCobblemonRaidMixin 是一款面向 [Cobblemon](https://modrinth.com/mod/cobblemon) 的模组，基于 [Necro's Raid Dens](https://modrinth.com/mod/cobblemon-raids) 深度增强巢穴玩法。提供精细化的奖励宝可梦 IV 生成控制、物种黑名单过滤以及灵活的权重随机命令奖励系统——全部按巢穴星级独立配置。支持**服务端和客户端**，可独立在任意一侧使用。
 
 ### 平台支持
 
@@ -290,10 +299,19 @@ MCobblemonRaidMixin 是一款面向 [Cobblemon](https://modrinth.com/mod/cobblem
 
 ### 安装步骤
 
+#### 服务端
 1. 从 [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases) 下载对应平台的 JAR 文件
 2. 放入服务器 `mods/` 目录
 3. 确保上述所有依赖也存在于 `mods/` 中
 4. 启动服务器——默认配置将自动生成于 `config/mcobblemonraidmixin.yml`
+
+#### 客户端（单人游戏）
+1. 从 [Releases](https://github.com/MengSama0502/MCobblemonRaidMixin/releases) 下载对应平台的 JAR 文件
+2. 放入客户端 `mods/` 目录
+3. 确保上述所有依赖也存在于 `mods/` 中
+4. 启动游戏——默认配置将自动生成于 `config/mcobblemonraidmixin.yml`
+
+> **注意：** 模组在两侧均可独立运行。你可以仅安装在服务端、仅安装在客户端，或两侧同时安装。
 
 ### 核心功能
 
@@ -467,7 +485,7 @@ cd MCobblemonRaidMixin
 ### 常见问题
 
 **Q: 此模组可以在客户端使用吗？**
-A: 不可以，这是纯服务端模组。安装在客户端不会有任何效果。
+A: 可以。模组在服务端和客户端均可独立运行。可以在服务端用于多人游戏，在客户端用于单人游戏，或两侧同时使用。
 
 **Q: 能在同一服务器上同时使用 Fabric 和 NeoForge 版本吗？**
 A: 不能。请选择与服务器 Mod Loader 匹配的版本。两者功能完全一致。
