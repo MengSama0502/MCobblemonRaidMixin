@@ -5,6 +5,7 @@ plugins {
 
 version = rootProject.mod_version
 group = rootProject.maven_group
+base.archivesName = "MCobbleRaidMixinFabric"
 
 repositories {
     mavenCentral()
